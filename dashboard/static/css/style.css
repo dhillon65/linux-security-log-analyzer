@@ -1,0 +1,90 @@
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --sidebar:#111827;
+    --text:#f8fafc;
+    --primary:#3b82f6;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+    --success:#22c55e;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Segoe UI',sans-serif;
+}
+
+.sidebar{
+    position:fixed;
+    width:260px;
+    height:100vh;
+    background:var(--sidebar);
+    padding:20px;
+}
+
+.sidebar h3{
+    color:white;
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+.sidebar a:hover{
+    background:#1e293b;
+}
+
+.main{
+    margin-left:280px;
+    padding:25px;
+}
+
+.card-custom h5{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.card-custom:hover{
+    transform:translateY(-4px);
+}
+
+.kpi{
+    font-size:2.4rem;
+    font-weight:700;
+}
+
+.critical{
+    color:var(--danger);
+}
+
+.high{
+    color:#fb923c;
+}
+
+.medium{
+    color:#facc15;
+}
+
+.low{
+    color:var(--success);
+}
+
+.table{
+    color:white;
+}
+
+.chart-card{
+    background:var(--card);
+    border-radius:18px;
+    padding:15px;
+    margin-top:20px;
+}

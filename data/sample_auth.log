@@ -1,0 +1,9 @@
+Jul 20 08:00:01 kali sshd[120]: Failed password for root from 192.168.1.100 port 22 ssh2
+
+Jul 20 08:01:05 kali sshd[121]: Failed password for admin from 192.168.1.100 port 22 ssh2
+
+Jul 20 08:02:12 kali sshd[122]: Accepted password for satnam from 192.168.1.10 port 22 ssh2
+
+Jul 20 08:03:30 kali sshd[123]: Failed password for root from 192.168.1.100 port 22 ssh2
+
+Jul 20 08:04:01 kali sshd[124]: Accepted password for admin from 192.168.1.20 port 22 ssh2

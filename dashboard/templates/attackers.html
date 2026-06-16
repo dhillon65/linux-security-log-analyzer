@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Top Attackers</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='static/css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>Attacker Intelligence</h1>
+
+<div class="card card-custom p-4 mt-4">
+
+<h3>Top Attacker IPs</h3>
+
+<input
+type="text"
+class="form-control mb-3"
+id="searchInput"
+placeholder="Search IP Address">
+
+<table
+class="table table-dark table-striped"
+id="attackerTable">
+
+<thead>
+
+<tr>
+<th>IP Address</th>
+<th>Score</th>
+<th>Severity</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for threat in data.threat_scores %}
+
+<tr>
+
+<td>{{ threat.ip }}</td>
+
+<td>{{ threat.score }}</td>
+
+<td>{{ threat.severity }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+const searchInput =
+document.getElementById(
+'searchInput'
+);
+
+searchInput.addEventListener(
+'keyup',
+function(){
+
+let value =
+this.value.toLowerCase();
+
+let rows =
+document.querySelectorAll(
+"#attackerTable tbody tr"
+);
+
+rows.forEach(row=>{
+
+row.style.display =
+row.innerText.toLowerCase()
+.includes(value)
+?
+''
+:
+'none';
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+venv/
+.env
+
+reports/pdf/
+reports/json/
+reports/csv/
+
+security_analyzer.log
+
+.idea/
+.vscode/
